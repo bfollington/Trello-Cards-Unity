@@ -13,35 +13,35 @@ In your browser (make sure to fill in your key from just before). You'll be take
 
 ## Example Code
 
-  using UnityEngine;
-  using System.Collections;
-  using MiniJSON;
-  using System.Collections.Generic;
-  using Trello;
-  
-  public class RunAtStart : MonoBehaviour {
-  
-  	// Use this for initialization
-  	IEnumerator Start () {
-  	
-  		var trello = new Trello.Trello("168af1464a92b344c8300cefca96434d", "8be141a3a52534d6f3f258f2de31d1c2ad1f8155fa4819d1fadcdb3be5abda57");
-  		
-  		// Async, do not block
-  		yield return trello.populateBoards();
-  		trello.setCurrentBoard("Proof");
-  		
-  		// Async, do not block
-  		yield return trello.populateLists();
-  		trello.setCurrentList("Feedback");
-  		
-  		var card = trello.newCard();
-  		card.name = "Unity Test";
-  		card.desc = "Description";
-  		card.due = "11/12/2014";
-  		
-  		yield return trello.uploadCard(card);
-  		
-  	}
-  }
+    using UnityEngine;
+    using System.Collections;
+    using MiniJSON;
+    using System.Collections.Generic;
+    using Trello;
+    
+    public class RunAtStart : MonoBehaviour {
+    
+    	// Use this for initialization
+    	IEnumerator Start () {
+    	
+    		var trello = new Trello.Trello(YOUR-KEY, YOUR-TOKEN);
+    		
+    		// Async, do not block
+    		yield return trello.populateBoards();
+    		trello.setCurrentBoard("Proof");
+    		
+    		// Async, do not block
+    		yield return trello.populateLists();
+    		trello.setCurrentList("Feedback");
+    		
+    		var card = trello.newCard();
+    		card.name = "Unity Test";
+    		card.desc = "Description";
+    		card.due = "11/12/2014";
+    		
+    		yield return trello.uploadCard(card);
+    		
+    	}
+    }
 
 
