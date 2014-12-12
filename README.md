@@ -3,6 +3,10 @@ Trello Cards For Unity
 
 This is a simple C# system for creating Trello cards in your own boards from your Unity app or game. Some use cases may be crash reports, significant events etc.
 
+## Installation
+
+Just drag these `.cs` files into your scripts folder, wherever you like. If you already have `MiniJson` in your project, you may get a namespace conflict. No matter, just delete the one from this repo.
+
 ## Usage
 
 Go ahead and grab a Trello Application Key from: https://trello.com/1/appKey/generate. Grab the application key, I'll refer to this as the `key` from now on.
