@@ -1,4 +1,4 @@
-Trello-Cards-Unity
+Trello Cards For Unity
 ==================
 
 This is a simple C# system for creating Trello cards in your own boards from your Unity app or game. Some use cases may be crash reports, significant events etc.
@@ -28,11 +28,11 @@ In your browser (make sure to fill in your key from just before). You'll be take
     		
     		// Async, do not block
     		yield return trello.populateBoards();
-    		trello.setCurrentBoard("Proof");
+    		trello.setCurrentBoard("Your Game");
     		
     		// Async, do not block
     		yield return trello.populateLists();
-    		trello.setCurrentList("Feedback");
+    		trello.setCurrentList("Achievements");
     		
     		var card = trello.newCard();
     		card.name = "Unity Test";
