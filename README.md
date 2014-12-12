@@ -41,7 +41,18 @@ In your browser (make sure to fill in your key from just before). You'll be take
     		
     		yield return trello.uploadCard(card);
     		
+    		// You can use the helper method to upload exceptions with relevant data
+    		try
+    		{
+    			throw new UnityException("Testing");
+    		} catch (UnityException e)
+    		{
+    			trello.uploadExceptionCard(e);
+    		}
+    		
     	}
     }
 
+## Errors
 
+If you see a `401 Unauthorized` message returnd, it likely means your `key` or `token` are invalid or have expired. Try generate new ones and trying again, if you're having trouble get in touch with me.
